@@ -1,11 +1,11 @@
 var e = require('express');
-var app = express();
+var appOne = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-app.use(e.static(__dirname + '/static'));
+appOne.use(e.static(__dirname + '/static'));
 
-app.get('/', function (req, res) {
+appOne.get('/', function (req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
